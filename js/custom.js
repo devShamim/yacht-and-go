@@ -194,9 +194,10 @@ $(document).ready(function () {
             }, 700);
         }, 700);
     });
-    
+
     //DatePicker
     $( "#pick-start-date" ).datepicker();
+    $( "#pick-finish-date" ).datepicker();
 
 
 });

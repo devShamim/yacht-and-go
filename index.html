@@ -301,12 +301,21 @@
 					<div class="ib-search-content">
 						<form action="#">
 							<div class="form-group">
-								<div class="row">
+								<div class="row" style="align-items: center;">
+                  <div class="col-md-4">
+                    <div class="select-op">
+                      <input type="text" placeholder="Name" class="user-name">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+										<div class="select-op">
+											<input type="text" placeholder="Start Date" id="pick-start-date" required>
+										</div>
+									</div>
 									<div class="col-md-4">
 										<div class="select-opt">
 											<select>
 												<option value="cabins">Cabins</option>
-												<option value="cabin-1">1</option>
 												<option value="cabin-2">2</option>
 												<option value="cabin-3">3</option>
 												<option value="cabin-4">4</option>
@@ -315,26 +324,16 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="select-opt">
-											<input type="text" placeholder="Start Date" id="pick-start-date" required>
+                  <div class="col-md-4">
+                    <div class="select-op">
+                      <input type="email" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+										<div class="select-op">
+											<input type="text" placeholder="Finish Date" id="pick-finish-date" required>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="select-opt">
-											<select>
-												<option value="">Length</option>
-												<option value="">< 20m</option>
-												<option value="">20m - 30m</option>
-												<option value="">> 50m</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Ends: .form-group -->
-							<div class="form-group">
-								<div class="row">
 									<div class="col-md-4">
 										<div class="select-opt">
 											<select>
@@ -345,21 +344,19 @@
 											</select>
 										</div>
 									</div>
+                  <div class="col-md-8">
+                    <div class="select-op">
+                      <textarea name="message" id="inquiry-message" placeholder="Your Message"></textarea>
+                    </div>
+                  </div>
 									<div class="col-md-4">
-										<div class="select-opt">
-											<select>
-												<option value="">Duration</option>
-												<option value="">-7 Days</option>
-												<option value="">7 Days</option>
-												<option value="">+7 Days</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<button type="submit">Send Inquiry</button>
+										<div class="select-op">
+                      <button type="submit">Send Inquiry</button>
+                    </div>
 									</div>
 								</div>
 							</div>
+							<!-- Ends: .form-group -->
 						</form>
 					</div>
 					<!-- Ends: .ib-search-content -->
