@@ -1,0 +1,248 @@
+/* Large Desktop Fix */
+@media only screen and (max-width: 1920px) {
+	
+}
+@media only screen and (max-width: 1368px) {
+	.about-us-top .container-main .aut-right {
+        padding-top: 0;
+        padding-right: 126px;
+    }
+    .about-us-bottom .container-main .aub-left {
+        padding-top: 0;
+        padding-left: 127px;
+    }
+}
+/* Tablet Layout: 768px */
+@media only screen and (max-width: 991px) {
+	.about-us .about-left{width:100%; display:block;}
+	.about-us .about-right{
+		width:100%;
+		display:block;
+		height:300px;
+		background:url(../images/about-img.jpg);
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	.about-us{
+		background:none;
+	}
+	.offers .offer-single{padding:15px;}
+	.offers .offer-single .offer-icon, .offers .offer-single .offer-texts {
+	  display: block;
+	  text-align: center;
+	}
+	.offers .offer-single .offer-icon{
+		width:100%;
+	}
+    header .header-main nav .brand-logo{
+        text-align: center;
+    }
+	header .header-main nav #cruise-menu ul {
+      text-align: center;
+      padding-left: 0;
+    }
+    header .header-main nav #cruise-menu ul li.nav-item {
+      padding-top: 0;
+    }
+    header .header-main nav #cruise-menu ul li.dropdown-block ul.mega-menu {
+      left: -45px;
+      width: 800px;
+    }
+    .cta-a{
+        text-align: center;
+    }
+    .cta-a .cta-btn{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .error-contents h2 {
+        font-size: 100px;
+        font-weight: 600;
+        margin-top: 0;
+        line-height: 72px;
+    }
+    .error-contents h3 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .error-contents span {
+        font-size: 15px;
+    }
+    .error-contents form {
+        margin-bottom: 60px;
+    }
+    .error-contents form button {
+        margin-top: 15px;
+    }
+    .au-cta h2 {
+        text-align: center;
+    }
+    .au-cta p {
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+    .about-us-top .container-main .aut-right {
+        padding-right: 30px;
+    }
+    .about-us-bottom .container-main .aub-left {
+        padding-left: 30px;
+    }
+    .au-testimonial .aut-carousel div p {
+        padding: 0;
+    }
+    .blog-wrapper .blog-content .blog-single .blog-thumb figure figcaption {
+        min-height: 100px;
+    }
+    .contact-sidebar {
+        margin-top: 60px;
+    }
+    .charter-details .yacht-sidebar {
+        margin-top: 60px;
+        padding-bottom: 0;
+    }
+    .boat-sell-form {
+        margin-top: 80px;
+    }
+}
+
+
+/* Mobile Layout: 480px */
+@media only screen and (max-width: 767px) {
+	.featured-boats .fb-single figure img {
+      width: 100%;
+    }
+    .testimonial .testimonial-slider .item {
+      padding: 50px 15px 15px;
+    }
+    .latest-news .news-wrapper .news-single a img{
+        width: 100%;
+    }
+    .intro-bottom-search .ib-search-content .form-group button {
+        margin-top: 30px;
+    }
+    .au-testimonial .aut-carousel div p {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .intro-bottom-search .ib-search-content .form-group:first-child {
+        margin-bottom:0;
+    }
+    .intro .intro-details .intro-info {
+        width: 100%;
+    }
+    .intro-slider figure figcaption .slide-details .slider-info {
+    	width: 100%;
+        padding: 30px;
+    }
+    .intro-slider figure figcaption .slide-details .slider-info p{
+        display: none;
+    }
+    .about-us .about-left {
+        background: #1A1F2B;
+        padding: 120px 30px;
+    }
+    .about-us-top .container-main .aut-left, .about-us-top .container-main .aut-right {
+        width: 100%;
+    }
+    .about-us-top .container-main .aut-left, .about-us-bottom .container-main .aub-left{
+        margin-bottom: 30px;
+    }
+    .about-us-bottom .container-main .aub-left, .about-us-bottom .container-main .aub-right {
+        width: 100%;
+    }
+    .blog-wrapper .blog-sidebar{
+        margin-top: 50px;
+    }
+    .blog-wrapper .blog-content .blog-single .blog-thumb figure figcaption {
+        min-height: 70px;
+    }
+    .blog-wrapper .blog-content .blog-single .blog-single-contents .rm-btn a {
+        padding: 8px 15px;
+    }
+    .cs-contents .countdown-timer #timer-wrapper .timer-body-block .table-cell .tab-val {
+        font-size: 35px;
+    }
+    .cs-contents h2 {
+        font-size: 30px;
+    }
+    .mean-container .mean-nav {
+        margin-top: 0;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #000;
+        margin-top: 6px;
+    }
+    .mean-container a.meanmenu-reveal{
+        color: #000;
+    }
+    .faqs .col-md-6:last-child {
+        margin-top: 60px;
+    }
+    .charter-details .yacht-details .heading .average-rating {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 20px;
+    }
+    .charter-details .yacht-details .contact-dealer .dealer-single{
+        margin-bottom: 30px;
+    }
+    .yacht-listing .yacht-single figure img{
+        width: 100%;
+    }
+}
+
+/* Mobile Layout: 320px */
+@media only screen and (max-width: 480px) {
+    header{
+        display: none;
+    }
+    .brand-logo {
+      background: #fff none repeat scroll 0 0;
+    }
+    .page-header-area {
+        top: 55px;
+    }
+    .mean-container a.meanmenu-reveal{
+        z-index: 1;
+    }
+    .charter-details .yacht-details .heading .average-rating {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 15px;
+    }
+    .charter-details .yacht-details .contact-dealer .dealer-single{
+        margin-bottom: 30px;
+    }
+    .login form .social-id ul li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .login form .social-id ul li:last-child{
+        margin-bottom: 0;
+    }
+    .boat-sell-container .boat-sell-form ul.nav li.nav-item {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

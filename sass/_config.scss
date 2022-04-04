@@ -1,0 +1,9 @@
+.btn-hover{
+    &:hover{
+        background: #333 !important;
+    }
+}
+input:hover, input:focus, select:focus{
+    outline: none;
+    box-shadow: none;
+}
