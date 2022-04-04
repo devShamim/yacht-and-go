@@ -2,3 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/xroadsfi/yacht-and-go.com
+    - /bin/cp -r * $DEPLOYPATH
