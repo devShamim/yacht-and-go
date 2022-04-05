@@ -209,7 +209,7 @@ $(document).ready(function () {
         message.text(response);
         setTimeout(function () {
             message.fadeOut();
-        }, 2000);
+        }, 5000);
         form.find('input:not([type="submit"]), textarea').val('');
     }
     // fail function
@@ -218,7 +218,7 @@ $(document).ready(function () {
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();
-        }, 2000);
+        }, 5000);
     }
 
     form.on('submit', function (e) {

@@ -70,9 +70,9 @@ if($_POST) {
     .'From: ' . $visitor_email . "\r\n";
     $success = mail($recipient, $user_name, $email_body, $headers);
     if($success) {
-        echo "<p>Thank you for contacting us, $user_name. You will get a reply within 24 hours.</p>";
+        echo "Thank you for contacting us, $user_name. You will get a reply within 24 hours.";
     } else {
-        echo '<p>We are sorry but the email did not go through.</p>';
+        echo 'We are sorry but the email did not go through.';
     }
 
 } else {
