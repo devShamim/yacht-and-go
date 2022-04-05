@@ -11,7 +11,7 @@ if($_POST) {
     $email_body = "<div>";
 
     if(isset($_POST['user_name'])) {
-        $user_name = filter_var($_POST['user_name'], FILTER_SANITIZE_STRING);
+        $user_name = filter_var($_POST['user_name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email_body .= "<div>
                            <label><b>Visitor Name:</b></label>&nbsp;<span>".$user_name."</span>
                         </div>";
@@ -26,23 +26,30 @@ if($_POST) {
     }
 
     if(isset($_POST['start_date'])) {
-        $start_date = filter_var($_POST['start_date'], FILTER_SANITIZE_STRING);
+        $start_date = filter_var($_POST['start_date'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email_body .= "<div>
                            <label><b>Start Date:</b></label>&nbsp;<span>".$start_date."</span>
                         </div>";
     }
 
     if(isset($_POST['end_date'])) {
-        $end_date = filter_var($_POST['end_date'], FILTER_SANITIZE_STRING);
+        $end_date = filter_var($_POST['end_date'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email_body .= "<div>
                            <label><b>Start Date:</b></label>&nbsp;<span>".$end_date."</span>
                         </div>";
     }
 
-    if(isset($_POST['Cabins'])) {
-        $Cabins = filter_var($_POST['Cabins'], FILTER_SANITIZE_STRING);
+    if(isset($_POST['cabins'])) {
+        $cabins = filter_var($_POST['cabins'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email_body .= "<div>
-                           <label><b>Cabins:</b></label>&nbsp;<span>".$Cabins."</span>
+                           <label><b>Cabins:</b></label>&nbsp;<span>".$cabins."</span>
+                        </div>";
+    }
+
+    if(isset($_POST['budget'])) {
+        $budget = filter_var($_POST['budget'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $email_body .= "<div>
+                           <label><b>Budget:</b></label>&nbsp;<span>".$budget."</span>
                         </div>";
     }
 
