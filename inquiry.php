@@ -61,7 +61,7 @@ if($_POST) {
                         </div>";
     }
 
-    $recipient = "shamimeforb@gmail.com";
+    $recipient = "contact@yacht-and-go.com";
 
     $email_body .= "</div>";
 
