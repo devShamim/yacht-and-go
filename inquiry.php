@@ -61,15 +61,8 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $visitor_email . "\r\n";
-    $user_name = "";
-    $visitor_email = "";
-    $start_date = "";
-    $end_date = "";
-    $cabins = "";
-    $budget = "";
-    $message = "";
     if(mail($recipient, $user_name, $visitor_email, $start_date, $end_date, $cabins, $budget, $message, $email_body, $headers)) {
-        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
+        echo "<p>Thank you for contacting us, $user_name. You will get a reply within 24 hours.</p>";
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
     }
