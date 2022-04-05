@@ -1,5 +1,5 @@
 <?php
-
+$data = [];
 if($_POST) {
     $user_name = "";
     $visitor_email = "";
@@ -68,7 +68,8 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $visitor_email . "\r\n";
-    if(mail($recipient, $visitor_email, $email_body, $headers)) {
+    $success = mail($recipient, $user_name, $email_body, $headers);
+    if($success) {
         echo "<p>Thank you for contacting us, $user_name. You will get a reply within 24 hours.</p>";
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';

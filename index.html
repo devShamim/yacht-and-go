@@ -299,12 +299,12 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="ib-search-content">
-						<form action="inquiry.php" method="post">
+						<form action="inquiry.php" method="post" class="inquiry-form">
 							<div class="form-group">
 								<div class="row" style="align-items: center;">
                   <div class="col-md-4">
                     <div class="select-op">
-                      <input type="text" placeholder="Name" name="user_name" class="user-name">
+                      <input type="text" placeholder="Name" name="user_name" class="user-name" required>
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -314,7 +314,7 @@
 									</div>
 									<div class="col-md-4">
 										<div class="select-opt">
-											<select name="cabins">
+											<select name="cabins" required>
 												<option value="">Cabins</option>
 												<option value="cabin-2">2</option>
 												<option value="cabin-3">3</option>
@@ -326,7 +326,7 @@
 									</div>
                   <div class="col-md-4">
                     <div class="select-op">
-                      <input type="email" name="visitor_email" placeholder="Email">
+                      <input type="email" name="visitor_email" placeholder="Email" required>
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -336,11 +336,11 @@
 									</div>
 									<div class="col-md-4">
 										<div class="select-opt">
-											<select name="budget">
+											<select name="budget" required>
 												<option value="">Budget (Per Week)</option>
-												<option value="">< 30K€</option>
-												<option value="">30K€ - 50K€</option>
-												<option value="">> 50K€</option>
+												<option value="< 30K€">< 30K€</option>
+												<option value="30K€ - 50K€">30K€ - 50K€</option>
+												<option value="> 50K€">> 50K€</option>
 											</select>
 										</div>
 									</div>
@@ -354,6 +354,11 @@
                       <button type="submit">Send Inquiry</button>
                     </div>
 									</div>
+									<div class="col-md-12">
+										<div class="alert alert-success contact__msg" style="display: none" role="alert">
+												Your message was sent successfully.
+										</div>
+								</div>
 								</div>
 							</div>
 							<!-- Ends: .form-group -->
