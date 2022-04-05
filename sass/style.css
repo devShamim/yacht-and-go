@@ -490,7 +490,6 @@ header nav ul li li:hover a {
 .intro-bottom-search .ib-search-content .form-group .select-opt select,
 .intro-bottom-search .ib-search-content .form-group .select-opt input {
   width: 100%;
-  text-transform: uppercase;
   background: none;
   border-top: 0;
   border-right: 0;
