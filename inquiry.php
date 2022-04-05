@@ -35,7 +35,7 @@ if($_POST) {
     if(isset($_POST['end_date'])) {
         $end_date = filter_var($_POST['end_date'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email_body .= "<div>
-                           <label><b>Start Date:</b></label>&nbsp;<span>".$end_date."</span>
+                           <label><b>End Date:</b></label>&nbsp;<span>".$end_date."</span>
                         </div>";
     }
 
@@ -68,7 +68,7 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $visitor_email . "\r\n";
-    if(mail($recipient, $user_name, $visitor_email, $start_date, $end_date, $cabins, $budget, $message, $email_body, $headers)) {
+    if(mail($recipient, $user_name, $visitor_email, $message, $email_body, $headers)) {
         echo "<p>Thank you for contacting us, $user_name. You will get a reply within 24 hours.</p>";
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
