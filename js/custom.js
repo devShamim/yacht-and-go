@@ -121,7 +121,9 @@ $(document).ready(function () {
     });
 
     //Sticky Menu
-    $(".header-main").sticky({ topSpaing: 0 });
+    $(".header-main").sticky({
+        topSpaing: 0
+    });
 
     //Video Popup
     $('.video-btn').magnificPopup({
@@ -196,40 +198,65 @@ $(document).ready(function () {
     });
 
     //DatePicker
-    $( "#pick-start-date" ).datepicker();
-    $( "#pick-finish-date" ).datepicker();
+    $(".pick-start-date").each(function (ind, elm) {
+        $(elm).datepicker();
+    });
+    $(".pick-finish-date").each(function (ind, elm) {
+        $(elm).datepicker();
+    });
+
 
     //inquiry form
     var form = $('.inquiry-form'),
-        message = $('.contact__msg'),
+        message = $(form).find('.contact__msg'),
         form_data;
     // Success function
-    function done_func(response) {
+    /* function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
         message.text(response);
         setTimeout(function () {
             message.fadeOut();
         }, 5000);
         form.find('input:not([type="submit"]), textarea, select').val('');
-    }
+    } */
     // fail function
-    function fail_func(data) {
+    /* function fail_func(data) {
         message.fadeIn().removeClass('alert-success').addClass('alert-success');
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();
         }, 5000);
-    }
+    } */
 
-    form.on('submit', function (e) {
-        e.preventDefault();
-        form_data = $(this).serialize();
-        $.ajax({
-            type: 'POST',
-            url: form.attr('action'),
-            data: form_data
-        })
-        .done(done_func)
-        .fail(fail_func);
-    });
+    form.each(function (indx, elm) {
+        $(elm).on('submit', function (e) {
+            var _this = $(this);
+            e.preventDefault();
+            form_data = $(this).serialize();
+            // Success function
+            function done_func(response) {
+                $(_this).find('.contact__msg').fadeIn().removeClass('alert-danger').addClass('alert-success');
+                $(_this).find('.contact__msg').text(response);
+                setTimeout(function () {
+                    $(_this).find('.contact__msg').fadeOut();
+                }, 5000);
+                $(_this).find('input:not([type="submit"]), textarea, select').val('');
+            }
+            // fail function
+            function fail_func(data) {
+                $(_this).find('.contact__msg').fadeIn().removeClass('alert-success').addClass('alert-success');
+                $(_this).find('.contact__msg').text(data.responseText);
+                setTimeout(function () {
+                    $(_this).find('.contact__msg').fadeOut();
+                }, 5000);
+            }
+            $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form_data
+                })
+                .done(done_func)
+                .fail(fail_func);
+        });
+    })
 });

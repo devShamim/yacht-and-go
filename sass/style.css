@@ -330,7 +330,8 @@ header nav ul li li:hover a {
 }
 
 .modal .modal-body form input,
-.modal .modal-body form textarea {
+.modal .modal-body form textarea,
+.modal .modal-body form select {
   width: 100%;
   height: 40px;
   padding: 0 15px;
