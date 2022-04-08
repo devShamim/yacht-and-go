@@ -26,7 +26,12 @@ h6 {
 
 h3 {
   font-weight: 500;
-  font-size: 22px;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
 }
 
 a {
@@ -3572,13 +3577,14 @@ body#coming-soon:before {
   padding: 120px 0;
 }
 
-.des-single .destination-details h3 {
+.des-single .destination-details h3,
+.des-single .destination-details h4 {
   margin: 30px 0 15px 0;
   font-weight: 600;
 }
 
 .des-single .destination-details p {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .des-single .regional-yachts {
